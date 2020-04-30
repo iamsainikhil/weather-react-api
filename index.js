@@ -1,28 +1,9 @@
 const express = require('express')
 const axios = require('axios')
-const cors = require('cors')
 const port = process.env.PORT || 3001
 
 // Configure app to use bodyParser to parse json data
 const app = express()
-
-// whitelisted domains
-// const WHITELISTED_DOMAINS = process.env.WHITELISTED_DOMAINS
-
-// app.use(
-//   cors({
-//     origin: function (origin, callback) {
-//       // allow requests with no origin
-//       // (like mobile apps or curl requests)
-//       if (!origin) return callback(null, true)
-//       if (WHITELISTED_DOMAINS.split(',').indexOf(origin) === -1) {
-//         var msg = `The CORS policy for this site does not allow access from the specified ${origin}.`
-//         return callback(new Error(msg), false)
-//       }
-//       return callback(null, true)
-//     },
-//   })
-// )
 
 const server = require('http').createServer(app)
 require('dotenv').config()
