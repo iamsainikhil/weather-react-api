@@ -1,7 +1,7 @@
 {
   "name": "weather-react-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "An express based serverless API function to provide data for weather-react app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,11 @@
   },
   "keywords": [],
   "author": "Sai Nikhil",
+  "license": "MIT",
+  "repository": "weather-react-api",
   "dependencies": {
     "axios": "^0.18.0",
+    "cors": "^2.8.5",
     "dotenv": "^6.1.0",
     "express": "^4.16.4"
   }

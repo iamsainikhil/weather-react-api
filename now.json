@@ -8,7 +8,7 @@
       "methods": ["GET"]
     },
     {
-      "src": "/address/coords/(?<city>[^/]+)/(?<latlong>[^/]+)",
+      "src": "/address/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
       "methods": ["GET"]
     },
