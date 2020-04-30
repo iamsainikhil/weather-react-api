@@ -5,28 +5,29 @@
     {
       "src": "/forecast/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"]
+      "methods": ["GET"],
+      "headers": {
+        "key": "Access-Control-Allow-Origin",
+        "value": "https://iamsainikhil.github.io/weather-react"
+      }
     },
     {
       "src": "/address/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"]
+      "methods": ["GET"],
+      "headers": {
+        "key": "Access-Control-Allow-Origin",
+        "value": "https://iamsainikhil.github.io/weather-react"
+      }
     },
     {
       "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"]
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "https://iamsainikhil.github.io/weather-react"
-        }
-      ]
+      "methods": ["GET"],
+      "headers": {
+        "key": "Access-Control-Allow-Origin",
+        "value": "https://iamsainikhil.github.io/weather-react"
+      }
     }
   ]
 }
