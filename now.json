@@ -5,6 +5,9 @@
     {
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "http://localhost:3000"
+      },
       "dest": "/index.js",
       "continue": true
     },
