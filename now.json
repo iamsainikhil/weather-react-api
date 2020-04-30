@@ -6,28 +6,19 @@
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": [
-          "https://iamsainikhil.github.io",
-          "http://localhost:3000"
-        ]
+        "Access-Control-Allow-Origin": "https://iamsainikhil.github.io"
       },
       "dest": "/index.js",
       "continue": true
     },
     {
-      "src": "/forecast/coords/(?<latlong>[^/]+)",
-      "dest": "/index.js",
-      "methods": ["GET"]
+      "src": "/forecast/coords/(?<latlong>[^/]+)"
     },
     {
-      "src": "/address/coords/(?<latlong>[^/]+)",
-      "dest": "/index.js",
-      "methods": ["GET"]
+      "src": "/address/coords/(?<latlong>[^/]+)"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
-      "dest": "/index.js",
-      "methods": ["GET"]
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)"
     }
   ]
 }
