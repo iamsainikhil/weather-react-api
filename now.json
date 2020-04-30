@@ -6,7 +6,10 @@
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "https://iamsainikhil.github.io/weather-react"
+        "Access-Control-Allow-Origin": [
+          "https://iamsainikhil.github.io",
+          "http://localhost:3000"
+        ]
       },
       "dest": "/index.js",
       "continue": true
