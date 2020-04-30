@@ -21,14 +21,11 @@ app.get('/', function (req, res) {
   const host = req.get('host')
   const origin = req.get('origin')
   console.log(host, origin)
-  res.json({message: 'Welcome to the Weather React application API!'})
-})
-
-app.get('/forecast', function (req, res) {
-  const host = req.get('host')
-  const origin = req.get('origin')
-  console.log(host, origin)
-  res.json({host, origin})
+  res.json({
+    message: 'Welcome to the Weather React application API!',
+    host: host,
+    origin: origin,
+  })
 })
 
 // Fetch weather forecast based on latlong
