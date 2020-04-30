@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [{"src": "index.js", "use": "@now/node-server"}],
+  "routes": [
+    {
+      "src": "/forecast/coords/:latlong",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/address/coords/:latlong",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    }
+  ]
+}

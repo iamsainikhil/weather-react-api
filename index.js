@@ -17,8 +17,8 @@ const HEADERS = {
 const DARKSKY_API_KEY = process.env.REACT_APP_DARKSKY_API_KEY
 
 // Test server is working (GET http://localhost:3001/api)
-app.get('/api/', function (req, res) {
-  res.json({message: 'Hi, welcome to the server api!'})
+app.get('/', function (req, res) {
+  res.json({message: 'Welcome to the Weather React application API!'})
 })
 
 // Fetch weather forecast based on latlong
