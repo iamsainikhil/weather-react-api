@@ -6,7 +6,7 @@
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "http://localhost:3000"
+        "Access-Control-Allow-Origin": "https://iamsainikhil.github.io"
       },
       "dest": "/index.js",
       "continue": true
