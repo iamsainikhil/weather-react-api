@@ -3,12 +3,17 @@
   "builds": [{"src": "index.js", "use": "@now/node-server"}],
   "routes": [
     {
-      "src": "/forecast/coords/:latlong",
+      "src": "/forecast/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
       "methods": ["GET"]
     },
     {
-      "src": "/address/coords/:latlong",
+      "src": "/address/coords/(?<city>[^/]+)/(?<latlong>[^/]+)",
+      "dest": "/index.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
       "dest": "/index.js",
       "methods": ["GET"]
     }
