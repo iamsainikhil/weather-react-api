@@ -1,1 +1,1 @@
-# react-go-starter
+# serverless node API functions
