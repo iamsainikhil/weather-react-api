@@ -5,9 +5,6 @@
     {
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      },
       "dest": "/index.js",
       "continue": true
     },
