@@ -3,31 +3,28 @@
   "builds": [{"src": "index.js", "use": "@now/node-server"}],
   "routes": [
     {
+      "src": ".*",
+      "methods": ["GET", "OPTIONS"],
+      "headers": {
+        "Access-Control-Allow-Origin": "https://iamsainikhil.github.io/weather-react"
+      },
+      "dest": "/index.js",
+      "continue": true
+    },
+    {
       "src": "/forecast/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"],
-      "headers": {
-        "key": "Access-Control-Allow-Origin",
-        "value": "https://iamsainikhil.github.io/weather-react"
-      }
+      "methods": ["GET"]
     },
     {
       "src": "/address/coords/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"],
-      "headers": {
-        "key": "Access-Control-Allow-Origin",
-        "value": "https://iamsainikhil.github.io/weather-react"
-      }
+      "methods": ["GET"]
     },
     {
       "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
       "dest": "/index.js",
-      "methods": ["GET"],
-      "headers": {
-        "key": "Access-Control-Allow-Origin",
-        "value": "https://iamsainikhil.github.io/weather-react"
-      }
+      "methods": ["GET"]
     }
   ]
 }
