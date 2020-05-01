@@ -24,7 +24,7 @@
     },
     {
       "src": "/places/query/(?<city>[^/]+)/",
-      "dest": "https://google.com"
+      "dest": "/places/query/(?<city>[^/]+)/00,00"
     }
   ]
 }
