@@ -8,23 +8,17 @@
       "headers": {
         "Access-Control-Allow-Origin": "http://localhost:3000"
       },
+      "dest": "/index.js",
       "continue": true
     },
     {
-      "src": "/forecast/coords/(?<latlong>[^/]+)",
-      "dest": "/index.js"
+      "src": "/forecast/coords/(?<latlong>[^/]+)"
     },
     {
-      "src": "/address/coords/(?<latlong>[^/]+)",
-      "dest": "/index.js"
+      "src": "/address/coords/(?<latlong>[^/]+)"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/",
-      "dest": "https://weather-react-api-dev.now.sh/places/query/(?<city>[^/]+)/00,00"
-    },
-    {
-      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
-      "dest": "/index.js"
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)"
     }
   ]
 }
