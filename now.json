@@ -20,7 +20,7 @@
     },
     {
       "src": "/places/query/(?<city>[^/]+)/",
-      "dest": "/places/query/(?<city>[^/]+)/00,00"
+      "dest": "https://weather-react-api-dev.now.sh/places/query/(?<city>[^/]+)/00,00"
     },
     {
       "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
