@@ -10,10 +10,11 @@ require('dotenv').config()
 
 // custom HTTP headers for authenticating requests sent to Algolia places server
 const HEADERS = {
-  'X-Algolia-Application-Id': process.env.REACT_APP_ALGOLIA_PLACES_APP_ID || '',
-  'X-Algolia-API-Key': process.env.REACT_APP_ALGOLIA_PLACES_API_KEY || '',
+  'X-Algolia-Application-Id': process.env.ALGOLIA_PLACES_APP_ID || '',
+  'X-Algolia-API-Key': process.env.ALGOLIA_PLACES_API_KEY || '',
 }
-const DARKSKY_API_KEY = process.env.REACT_APP_DARKSKY_API_KEY
+const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY
+const IPINFO_TOKEN = process.env.IPINFO_TOKEN
 
 // Test server is working (GET http://localhost:3001/)
 app.get('/', function (req, res) {
@@ -24,14 +25,13 @@ app.get('/', function (req, res) {
   })
 })
 
-// Fetch weather forecast based on latlong
-app.get('/forecast/coords/:latlong', (req, res) => {
-  const {latlong} = req.params
-  const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${latlong}?extend=hourly&exclude=minutely,flags`
+// Fetch IP information
+app.get('/ipinfo', (req, res) => {
+  const url = `https://ipinfo.io?token=${IPINFO_TOKEN}`
   axios
     .get(url)
     .then((response) => {
-      const data = response.data
+      const {data} = response
       res.status(200)
       res.send({
         data,
@@ -50,7 +50,26 @@ app.get('/address/coords/:latlong', (req, res) => {
   axios
     .get(url, {headers: HEADERS})
     .then((response) => {
-      const data = response.data
+      const {data} = response
+      res.status(200)
+      res.send({
+        data,
+      })
+    })
+    .catch((err) => {
+      res.status(err.response ? err.response.status : 500)
+      res.send(err.message || 'Something went wrong! Please try again later.')
+    })
+})
+
+// Fetch weather forecast based on latlong
+app.get('/forecast/coords/:latlong', (req, res) => {
+  const {latlong} = req.params
+  const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${latlong}?extend=hourly&exclude=minutely,flags`
+  axios
+    .get(url)
+    .then((response) => {
+      const {data} = response
       res.status(200)
       res.send({
         data,
@@ -77,7 +96,7 @@ app.get('/places/query/:city/:latlong', (req, res) => {
       headers: HEADERS,
     })
     .then((response) => {
-      const data = response.data
+      const {data} = response
       res.status(200)
       res.send({
         data,
