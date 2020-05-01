@@ -12,13 +12,13 @@
       "continue": true
     },
     {
-      "src": "/forecast/coords/(?<latlong>[^/]+)"
+      "src": "/forecast/coords/(?<latlong>[^/]*)"
     },
     {
-      "src": "/address/coords/(?<latlong>[^/]+)"
+      "src": "/address/coords/(?<latlong>[^/]*)"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)*"
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]*)"
     }
   ]
 }
