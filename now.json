@@ -18,11 +18,10 @@
       "src": "/address/coords/(?<latlong>[^/]+)"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/",
-      "dest": "/places/query/(?<city>[^/]+)/00,00"
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)"
+      "src": "/places/query/(?<city>[^/]+)/"
     }
   ]
 }
