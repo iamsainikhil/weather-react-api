@@ -6,7 +6,7 @@
       "src": ".*",
       "methods": ["GET", "OPTIONS"],
       "headers": {
-        "Access-Control-Allow-Origin": "http://localhost"
+        "Access-Control-Allow-Origin": "http://localhost:[^/]*"
       },
       "dest": "/index.js",
       "continue": true
