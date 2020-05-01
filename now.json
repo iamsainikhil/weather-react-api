@@ -19,12 +19,12 @@
       "dest": "/index.js"
     },
     {
-      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
-      "dest": "/index.js"
-    },
-    {
       "src": "/places/query/(?<city>[^/]+)/",
       "dest": "/places/query/(?<city>[^/]+)/00,00"
+    },
+    {
+      "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)",
+      "dest": "/index.js"
     }
   ]
 }
