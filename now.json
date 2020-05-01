@@ -12,10 +12,13 @@
       "continue": true
     },
     {
-      "src": "/forecast/coords/(?<latlong>[^/]+)"
+      "src": "/ipinfo"
     },
     {
       "src": "/address/coords/(?<latlong>[^/]+)"
+    },
+    {
+      "src": "/forecast/coords/(?<latlong>[^/]+)"
     },
     {
       "src": "/places/query/(?<city>[^/]+)/(?<latlong>[^/]+)"
