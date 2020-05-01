@@ -33,9 +33,7 @@ app.get('/ipinfo', (req, res) => {
     .then((response) => {
       const {data} = response
       res.status(200)
-      res.send({
-        data,
-      })
+      res.json(data)
     })
     .catch((err) => {
       res.status(err.response ? err.response.status : 500)
@@ -52,9 +50,7 @@ app.get('/address/coords/:latlong', (req, res) => {
     .then((response) => {
       const {data} = response
       res.status(200)
-      res.send({
-        data,
-      })
+      res.json(data)
     })
     .catch((err) => {
       res.status(err.response ? err.response.status : 500)
@@ -71,9 +67,7 @@ app.get('/forecast/coords/:latlong', (req, res) => {
     .then((response) => {
       const {data} = response
       res.status(200)
-      res.send({
-        data,
-      })
+      res.json(data)
     })
     .catch((err) => {
       res.status(err.response ? err.response.status : 500)
@@ -98,9 +92,7 @@ app.get('/places/query/:city/:latlong', (req, res) => {
     .then((response) => {
       const {data} = response
       res.status(200)
-      res.send({
-        data,
-      })
+      res.json(data)
     })
     .catch((err) => {
       res.status(err.response ? err.response.status : 500)
