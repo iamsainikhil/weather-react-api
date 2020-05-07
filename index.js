@@ -14,7 +14,6 @@ const HEADERS = {
   'X-Algolia-API-Key': process.env.ALGOLIA_PLACES_API_KEY || '',
 }
 const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY
-const IPINFO_TOKEN = process.env.IPINFO_TOKEN
 
 // Test server is working (GET http://localhost:3001/)
 app.get('/', function (req, res) {
