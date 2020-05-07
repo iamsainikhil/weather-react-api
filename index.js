@@ -18,11 +18,19 @@ const IPINFO_TOKEN = process.env.IPINFO_TOKEN
 
 // Test server is working (GET http://localhost:3001/)
 app.get('/', function (req, res) {
-  const host = req.get('host')
-  res.json({
-    message: 'Welcome to the Weather React application API!',
-    host: host,
-  })
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Weather React API</title>
+    </head>
+    <body>
+      <h1>Welcome to <a href="https://iamsainikhil.github.io/weather-react" target="_blank" rel="noreferrer noopener">Weather React</a> application's proxy server</h1>
+    </body>
+    </html>
+  `)
 })
 
 // Fetch address based on latlong
