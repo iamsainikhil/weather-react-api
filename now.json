@@ -12,9 +12,6 @@
       "continue": true
     },
     {
-      "src": "/ipinfo"
-    },
-    {
       "src": "/address/coords/(?<latlong>[^/]+)"
     },
     {

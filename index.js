@@ -25,22 +25,6 @@ app.get('/', function (req, res) {
   })
 })
 
-// Fetch IP information
-app.get('/ipinfo', (req, res) => {
-  const url = `https://ipinfo.io?token=${IPINFO_TOKEN}`
-  axios
-    .get(url)
-    .then((response) => {
-      const {data} = response
-      res.status(200)
-      res.json(data)
-    })
-    .catch((err) => {
-      res.status(err.response ? err.response.status : 500)
-      res.send(err.message || 'Something went wrong! Please try again later.')
-    })
-})
-
 // Fetch address based on latlong
 app.get('/address/coords/:latlong', (req, res) => {
   const {latlong} = req.params
