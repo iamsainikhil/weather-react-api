@@ -27,7 +27,8 @@ app.get('/', function (req, res) {
     </head>
     <body>
       <h1>Welcome to <a href="https://iamsainikhil.github.io/weather-react" target="_blank" rel="noreferrer noopener">Weather React</a> application's proxy server</h1>
-    </body>
+      <p><a href="https://documenter.getpostman.com/view/11333824/Szme4J4W" target="_blank">API documentation</a></p>
+      </body>
     </html>
   `)
 })
